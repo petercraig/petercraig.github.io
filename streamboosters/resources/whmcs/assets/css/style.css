@@ -1,0 +1,42 @@
+/*
+  Craig Ventures
+  www.craigventures.com
+  contact@craigventures.com
+*/
+
+@import url(http://fonts.googleapis.com/css?family=Duru+Sans);
+
+body {
+	font-family: 'Duru Sans', sans-serif;
+	background-image: url(http://i.imgur.com/BlWNp3U.png);
+	background-repeat: repeat;
+}
+
+.navbar-inner {
+	background-color: #7F68A8;
+	background-image: -webkit-linear-gradient(top, #7F68A8, #584875) !important;
+	color: #FFFFFF;
+}
+
+.navbar .nav > li > a {
+	color: #FFFFFF;
+}
+
+.navbar .nav > li > a:hover {
+	color: #FFFFFF;
+	text-decoration: underline;
+}
+
+.navbar .nav > li > a:active {
+	color: #FFFFFF;
+	text-decoration: underline;
+}
+
+.navbar {
+	margin-top: 50px;
+}
+
+.footerdivider {
+	background-color: #7F68A8;
+	background-image: -webkit-linear-gradient(top, #7F68A8, #584875) !important;
+}
