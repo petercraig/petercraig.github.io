@@ -1,0 +1,217 @@
+<!--
+    Craig Ventures
+    www.craigventures.com  
+    contact@craigventures.com
+-->
+
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <!-- Meta -->
+	<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+	<meta charset="utf-8">
+    <meta name="author" content="PETERCRAIG">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    <!-- Title -->
+	<title>Management Dashboard</title>
+
+    <!-- Scripts -->
+	<script src="assets/js/jquery.js"></script>
+	<script src="assets/js/jquery-ui-1.js"></script>
+	<script src="assets/js/jquery-ui-timepicker-addon.js"></script>
+    
+    <!-- Styles -->
+    <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
+	<link rel="stylesheet" href="assets/css/jquery-ui-1.css">
+	<link rel="stylesheet" href="assets/css/jquery-ui-timepicker-addon.css">
+	<link rel="stylesheet" href="assets/css/craigventures.css">
+	
+    <!-- Favicon -->
+	<link rel="icon" type="image/png" href="http://streamboosters.com/favicon.ico">
+    
+    <!-- Other -->
+	<script src="assets/etc/clientjs.php"></script>
+    
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->  
+    
+	</head>
+	<body>
+        
+        <p id="header"></p>
+        
+        <center>
+            <!-- Logo -->
+            <img src="assets/img/logo.png" width="450px" alt="Stream Boosters Logo" />
+        </center>
+
+        <div class="container">
+            <input id="logoutform" value="Logout" type="submit">
+        </div> 
+        
+        <div class="container">   
+            <div class="row">
+                
+                <div class="col-md-12">
+                    <div class="panel panel-twitch">
+                Switch to <a href="http://tempest.us.to/control/index.php?control">User Control Panel</a>
+			<br><br>
+			Hosts:<br>server label 1: <span style="font-weight: bold; color:green;">on</span><br>
+			<br>
+			Currently running viewers:<br>
+			<br>server label 1
+				<br>&nbsp;&nbsp;&nbsp;<span class="removalInserterRTMP" style="cursor: pointer; color: pink;" title="select for removal">streamid1</span>: 62[52] <img class="onlineIndicator" data-id="streamid1" src="UPIT%20Promotions%20Control%20Panel-Dateien/status-unknown.png"> <input class="streamKiller" value="kill" data-id="streamid1" type="button">
+				<br>&nbsp;&nbsp;&nbsp;<span class="removalInserterRTMP" style="cursor: pointer; color: pink;" title="select for removal">streamid2</span>: 56[47] <img class="onlineIndicator" data-id="streamid2" src="UPIT%20Promotions%20Control%20Panel-Dateien/status-unknown.png"> <input class="streamKiller" value="kill" data-id="streamid2" type="button">
+				<br>&nbsp;&nbsp;&nbsp;<span class="removalInserterRTMP" style="cursor: pointer; color: pink;" title="select for removal">streamid3</span>: 108[90] <img class="onlineIndicator" data-id="streamid3" src="UPIT%20Promotions%20Control%20Panel-Dateien/status-unknown.png"> <input class="streamKiller" value="kill" data-id="streamid3" type="button">
+				<br>
+			Currently running chatters:<br>
+			ircid1: 16<br>ircid2: 72<br>ircid3: 60<br>
+			<br>server label 1
+				<br>&nbsp;&nbsp;&nbsp;<span class="removalInserterIRC" style="cursor: pointer; color: pink;" title="select for removal">ircid1</span>: 16 <img class="onlineIndicator" data-id="ircid1" src="UPIT%20Promotions%20Control%20Panel-Dateien/status-unknown.png"> <input class="streamKiller" value="kill" data-id="ircid1" type="button">
+				<br>&nbsp;&nbsp;&nbsp;<span class="removalInserterIRC" style="cursor: pointer; color: pink;" title="select for removal">ircid2</span>: 72 <img class="onlineIndicator" data-id="ircid2" src="UPIT%20Promotions%20Control%20Panel-Dateien/status-unknown.png"> <input class="streamKiller" value="kill" data-id="ircid2" type="button">
+				<br>&nbsp;&nbsp;&nbsp;<span class="removalInserterIRC" style="cursor: pointer; color: pink;" title="select for removal">ircid3</span>: 60 <img class="onlineIndicator" data-id="ircid3" src="UPIT%20Promotions%20Control%20Panel-Dateien/status-unknown.png"> <input class="streamKiller" value="kill" data-id="ircid3" type="button">
+                    
+                    </div>
+                </div>
+
+			
+		<fieldset>
+			<legend>start / stop viewers</legend>
+			<form id="startViewersCustom">
+				Hoster: <select id="startViewersCustomHoster"><option selected="selected" value="twitch">Twitch</option><option value="hashd">Hashd</option></select>
+				Channel: <input id="startViewersCustomChannel" size="10">
+				#Instances: <input size="3" id="startViewersCustomCount">
+				Delay(total, msec): <input size="8" id="startViewersCustomDelay">
+				<input value="start viewers" type="submit">
+			</form><br>
+			<form id="stopViewersCustom">
+				Hoster: <select id="stopViewersCustomHoster"><option selected="selected" value="twitch">Twitch</option><option value="hashd">Hashd</option></select>
+				Channel: <input id="stopViewersCustomChannel" size="10">
+				#Instances: <input size="3" id="stopViewersCustomCount">
+				<input value="stop viewers" type="submit">
+			</form>
+		</fieldset>
+		<br><br>
+		<fieldset>
+			<legend>start / stop irc chatters</legend>
+			<form id="startChattersCustom">
+				Server: <input id="startChattersCustomServer" size="15" style="text-align: right;" value="irc.twitch.tv"> 
+				Port: <input id="startChattersCustomPort" size="4" value="6667"> 
+				Channel: <input id="startChattersCustomChannel" size="10" value="#"> 
+				#Instances: <input size="3" id="startChattersCustomCount"> 
+				Delay: <input size="3" id="startChattersCustomDelay" value="0">
+				<input value="start chatters" type="submit">
+			</form><br>
+			<form id="stopChattersCustom">
+				Server: <input id="stopChattersCustomServer" size="15" style="text-align: right;" value="irc.twitch.tv"> 
+				Channel: <input id="stopChattersCustomChannel" size="10" value="#"> 
+				#Instances: <input size="3" id="stopChattersCustomCount"> 
+				Delay: <input size="3" id="stopChattersCustomDelay" value="0">
+				<input value="stop chatters" type="submit">
+			</form>
+		</fieldset>
+		<br><br>
+		<fieldset>
+			<legend>add a user</legend>
+			<form id="addUser">
+				Name: <input id="addUserName" size="10">
+				Pass: <input id="addUserPass" size="10">
+				Hoster: <select id="addUserHoster"><option selected="selected" value="twitch">Twitch</option><option value="hashd">Hashd</option></select>
+				Channel: <input id="addUserChannel" size="10">
+				Privileged: <input id="addUserPrivileged" type="checkbox">
+				Admin: <input id="addUserAdmin" type="checkbox"><br>
+				Instances: <input id="addUserInstances" size="4">
+				Minutes: <input id="addUserMinutes" size="5">
+				Starts: <input id="addUserStarts" class="startDateSelector hasDatepicker" size="18">
+				Expires: <input id="addUserExpires" class="endDateSelector hasDatepicker" size="18"><br>
+				<input value="add user" type="submit">
+			</form>
+		</fieldset>
+		<br><br>
+		<fieldset>
+			<legend>list/edit/delete users</legend>
+			<input id="userTableHider" value="hide" type="button">
+			<table style="display: table;" id="listUsersTable">
+				<thead>
+					<tr>
+						<th>Name</th>
+						<th>Pass</th>
+						<th>Hoster</th>
+						<th>Channel</th>
+						<th>Priv</th>
+						<th>Admin</th>
+						<th>Instances</th>
+						<th>Minutes</th>
+						<th>Values are valid between</th>
+						<th>Actions</th>
+					</tr>
+				</thead>
+				<tbody><tr id="userrow_id1">
+			<td><input name="changeUserName" size="10" value="user1"></td>
+			<td><input name="changeUserPass" size="10" value="pass1" type="password"></td>
+			<td><select name="changeUserHoster"><option value="twitch" selected="selected">Twitch</option><option value="hashd">Hashd</option></select></td>
+			<td><input name="changeUserChannel" size="10" value="channel1"></td>
+			<td><input name="changeUserPrivileged" type="checkbox"></td>
+			<td><input name="changeUserAdmin" checked="checked" type="checkbox"></td>
+			<td><input name="changeUserInstances" size="4" value="500"></td>
+			<td>0 / <input name="changeUserMinutes" size="5" value="99999"></td>
+			<td><input id="dp1399143417666" name="changeUserStarts" class="startDateSelector hasDatepicker" size="18" value="2013-03-01 00:00:00">
+				<input id="dp1399143417667" name="changeUserExpires" class="endDateSelector hasDatepicker" size="18" value="2020-04-05 23:59:59"></td>
+			<td>
+				<form class="editUser"><input name="id" value="32" type="hidden"><input value="edit" type="submit"></form>
+				<form class="delUser"><input name="id" value="32" type="hidden"><input value="del" type="submit"></form>
+				<input class="streamKiller" value="kill" data-id="streamid1" type="button">
+			</td>
+		</tr><tr id="userrow_id2">
+			<td><input name="changeUserName" size="10" value="user1"></td>
+			<td><input name="changeUserPass" size="10" value="pass2" type="password"></td>
+			<td><select name="changeUserHoster"><option value="twitch">Twitch</option><option value="hashd" selected="selected">Hashd</option></select></td>
+			<td><input name="changeUserChannel" size="10" value="channel1"></td>
+			<td><input name="changeUserPrivileged" type="checkbox"></td>
+			<td><input name="changeUserAdmin" checked="checked" type="checkbox"></td>
+			<td><input name="changeUserInstances" size="4" value="6"></td>
+			<td>0 / <input name="changeUserMinutes" size="5" value="99999"></td>
+			<td><input id="dp1399143417668" name="changeUserStarts" class="startDateSelector hasDatepicker" size="18" value="2013-03-10 00:00:00">
+				<input id="dp1399143417669" name="changeUserExpires" class="endDateSelector hasDatepicker" size="18" value="2020-12-31 23:59:59"></td>
+			<td>
+				<form class="editUser"><input name="id" value="33" type="hidden"><input value="edit" type="submit"></form>
+				<form class="delUser"><input name="id" value="33" type="hidden"><input value="del" type="submit"></form>
+				<input class="streamKiller" value="kill" data-id="streamid2" type="button">
+			</td>
+		</tr><tr id="userrow_id3">
+			<td><input name="changeUserName" size="10" value="user3"></td>
+			<td><input name="changeUserPass" size="10" value="pass3" type="password"></td>
+			<td><select name="changeUserHoster"><option value="twitch" selected="selected">Twitch</option><option value="hashd">Hashd</option></select></td>
+			<td><input name="changeUserChannel" size="10" value="channel3"></td>
+			<td><input name="changeUserPrivileged" type="checkbox"></td>
+			<td><input name="changeUserAdmin" type="checkbox"></td>
+			<td><input name="changeUserInstances" size="4" value="300"></td>
+			<td>0 / <input name="changeUserMinutes" size="5" value="9000"></td>
+			<td><input id="dp1399143417670" name="changeUserStarts" class="startDateSelector hasDatepicker" size="18" value="2013-03-11 00:00:00">
+				<input id="dp1399143417671" name="changeUserExpires" class="endDateSelector hasDatepicker" size="18" value="2013-08-30 23:59:59"></td>
+			<td>
+				<form class="editUser"><input name="id" value="34" type="hidden"><input value="edit" type="submit"></form>
+				<form class="delUser"><input name="id" value="34" type="hidden"><input value="del" type="submit"></form>
+				<input class="streamKiller" value="kill" data-id="streamid3" type="button">
+			</td>
+		</tr></tbody>
+			</table>
+		</fieldset>
+	<!-- stop control -->
+	<!-- start response container -->
+		<br style="clear: both;">
+		<fieldset id="responseContainer">
+			<legend>Response</legend>
+			<span id="response"></span>
+		</fieldset>
+	<!-- stop response container -->
+	<!-- start footer -->
+	<p style="text-align: center; clear: both;"><a href="http://streamboosters.com/clients/knowledgebase/1/Control-Panel-Guide.html"><img src="UPIT%20Promotions%20Control%20Panel-Dateien/help.gif"> Guide to using this CP</a> | <a href="http://www.upitpromo.com/p/terms-of-service.html">Terms of service</a></p>	<p style="clear: both; text-align: center;">Current server time is 2014-05-03 20:56:50 (GMT+0200)</p>
+	
+
+<div id="ui-datepicker-div" class="ui-datepicker ui-widget ui-widget-content ui-helper-clearfix ui-corner-all"></div></body></html>
