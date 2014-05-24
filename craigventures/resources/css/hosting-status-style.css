@@ -12,12 +12,12 @@ body {
 
 .message-box {
     border: 1px dashed #cc0000;
-    background-color:#FBEEEB;
-    width:500px;
-    padding:10px;
-    color:#cc0000;
+    background-color: #FBEEEB;
+    width: 500px;
+    padding: 10px;
+    color: #CC0000;
     text-align: center;
-    margin:0 auto;
+    margin: 0 auto;
     margin-top: 30px;
 }
 
