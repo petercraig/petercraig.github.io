@@ -16,7 +16,7 @@ h1 {
     padding-top: 30px;
 }
 
-a, a:hover, a:visted, a:active {
+a.email, a.email:hover, a.email:visted, a.email:active {
     color: #000000;
     text-decoration: none;
 }
