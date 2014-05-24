@@ -17,6 +17,6 @@ h1 {
 }
 
 a.email, a.email:hover, a.email:visted, a.email:active {
-    color: #000000;
-    text-decoration: none;
+    color: #000000 !important;
+    text-decoration: none !important;
 }
