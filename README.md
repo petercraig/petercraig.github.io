@@ -5,7 +5,7 @@
   }
   a {
   }
-  
+</style>
 
 This is the repository for <a href="https://petercraig.github.io/" target="_blank">petercraig.github.io</a>. 
 
