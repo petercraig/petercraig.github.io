@@ -1,0 +1,194 @@
+<!--
+    Craig Ventures 
+    www.craigventures.com
+    contact@craigventures.com
+-->
+
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <!-- Meta -->
+	<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+	<meta charset="utf-8">
+    <meta name="author" content="PETERCRAIG">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    <!-- Title -->
+	<title>Management Dashboard</title>
+	
+    <!-- Scripts -->
+	<script src="https://petercraig.github.io/streamboosters/resources/cp/assets/js/jquery.js"></script>
+	<script src="https://petercraig.github.io/streamboosters/resources/cp/assets/js/jquery-ui-1.js"></script>
+	<script src="https://petercraig.github.io/streamboosters/resources/cp/assets/js/jquery-ui-timepicker-addon.js"></script>
+    
+    <!-- Styles -->
+    <link rel="stylesheet" href="https://petercraig.github.io/streamboosters/resources/cp/assets/bootstrap/css/bootstrap.min.css">
+	<link rel="stylesheet" href="https://petercraig.github.io/streamboosters/resources/cp/assets/css/jquery-ui-1.css">
+	<link rel="stylesheet" href="https://petercraig.github.io/streamboosters/resources/cp/assets/css/jquery-ui-timepicker-addon.css">
+	<link rel="stylesheet" href="https://petercraig.github.io/streamboosters/resources/cp/assets/css/craigventures.css">
+	
+    <!-- Favicon -->
+	<link rel="icon" type="image/png" href="http://streamboosters.com/favicon.ico">
+    
+    <!-- Other -->
+	<script src="https://petercraig.github.io/streamboosters/resources/cp/assets/etc/clientjs.php"></script>
+    
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->  
+
+</head>
+<body>
+    
+	<p id="header"></p>    
+    
+	<center>
+        <!-- Logo -->
+		<img src="https://petercraig.github.io/streamboosters/resources/cp/assets/img/logo.png" width="450px" alt="Stream Boosters Logo" />
+	</center>
+    
+    <div class="container">
+      <input id="logoutform" value="Logout" type="submit">
+      <a href="http://streamboosters.com/clients/clientarea.php" target="_blank"><input id="clientarea" value="Client Area" type="submit"></a> 
+    </div>  
+    
+        <div class="container">   
+            <div class="row">
+                
+                <!-- Simple Control -->
+                <div class="col-md-4">
+                    <div class="panel panel-twitch top-panel-fixed">
+                        <center>
+                            <h4>Simple Control&nbsp;<small>(Recommended)</small></h4><br />
+                        </center>
+                        <center>
+                            <form id="startViewerForm"><input value="Start Viewers" type="submit"></form>
+                            <form id="stopViewerForm"><input value="Stop Viewers" type="submit"></form>
+                        </center>
+                    </div>
+                </div>
+                
+                <!-- News Box -->
+                <div class="col-md-8">
+                    <div class="panel panel-twitch top-panel-fixed">
+                        <center><h4>Notice Board</h4><br /></center>
+                        <ul>
+                        <li>This is a news box!</li>
+                        <li>This is a news box!</li>
+                        <li>This is a news box!</li>
+                        </ul>
+                    </div>
+                </div>
+                
+            </div>
+            <div class="row">
+                
+                <!-- Column #1 -->
+                <div class="col-md-4">
+                    <!-- Panel -->  
+                    <div class="panel panel-twitch bottom-panel-fixed">
+                        <center>
+                            <h4>Advanced Viewer Control</h4><br />
+                        </center>
+                        <center>
+                            <form id="startViewersCustom">
+                                Number: <input type="textinput" size="3" id="startViewersCustomCount" value="100">
+                                Delay: <input type="textinput" size="3" id="startViewersCustomDelay" value="20">
+                                &nbsp;&nbsp;<input value="Start Viewers" type="submit"><br /><br />
+                            </form>
+                            <form id="stopViewersCustom">
+                                Number: <input type="textinput" size="3" id="stopViewersCustomCount" value="0"/>&nbsp;&nbsp;
+                                <input type="submit" value="Stop Viewers"/>
+                            </form>
+                        </center><br />
+                    </div>
+                </div>
+
+
+                <!-- Column #3 -->
+                <div class="col-md-4">
+                    <div class="panel panel-twitch bottom-panel-fixed">
+                        <center>
+                            <h4>Advanced Chatter Control</h4><br />
+                        </center>
+                        <center>
+                            <form id="startChattersCustom">
+                            Number: <input type="textinput" size="3" id="startChattersCustomCount" value="60"> 
+                            Delay: <input type="textinput" size="3" id="startChattersCustomDelay" value="20">
+                            &nbsp;&nbsp;<input value="Start Chatters" type="submit"><br /><br />
+                            </form>
+                            <form id="stopChattersCustom">
+                            Number: <input type="textinput" size="3" id="stopChattersCustomCount" value="0"/>
+                            Delay: <input type="textinput" size="3" id="stopChattersCustomDelay" value="0"/>
+                            &nbsp;&nbsp;<input type="submit" value="Stop Chatters"/>
+                            </form>
+                        </center><br />
+                    </div>
+                </div>
+                
+                <!-- Column #2 -->
+                <div class="col-md-4">
+                    <div class="panel panel-twitch bottom-panel-fixed">
+                        <center>
+                            <h4>Account Management</h4>
+                        </center>
+
+                    <br />
+                    <table class="table table-bordered">
+                        <tbody>
+                            <tr>
+                                <td><strong>Channel</strong></td>
+                                <td>User@Twitch</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Target</strong></td>
+                                <td>XXX Viewers<br />
+                                    XXX Chatters</td>
+                            </tr>
+                            <tr>
+                                <td><strong>From</strong></td>
+                                <td>0000-00-00 00:00:00</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Until</strong></td>
+                                <td>0000-00-00 00:00:00</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Hours</strong></td>
+                                <td>Booked: 0.00hrs<br />
+                                    Used: 0.00hrs<br />
+                                    Left: 0.00hrs</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <br />
+                    
+                </div>
+            </div>
+            
+        </div>
+    </div>
+    
+    <!-- Response Container -->
+    <br style="clear: both;"/>
+    <fieldset id="responseContainer">
+        <legend>Response</legend>
+        <span id="response"></span>
+    </fieldset>
+    
+    <!-- Footer -->
+    <footer>
+        <center>
+            <span class="footer">Copyright 2014 &copy; Upit Promotions</span>
+        </center>
+    </footer>
+    
+    <br />
+
+    <script src="https://petercraig.github.io/streamboosters/resources/cp/assets/bootstrap/js/bootstrap.min.js"></script>
+    
+</body>
+</html>
