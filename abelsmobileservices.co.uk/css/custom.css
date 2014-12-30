@@ -1,0 +1,157 @@
+/*
+    Craig Ventures
+    www.craigventures.com
+    support@craigventures.com
+*/
+
+@import url(https://fonts.googleapis.com/css?family=Lato:300,400,700);
+
+body {
+    font-family: 'Lato', sans-serif !important;
+}
+
+.fright {
+    padding-bottom: 35px !important;
+}
+
+body, .main-bg, .bg {
+    background-image: url(../images/bg-new.png) !important;
+    background-repeat: repeat !important;
+}
+
+/*
+.nav-dave {
+    background-color: #b22300;
+    border-color: #b22300;
+    border-width: 0px !important;
+}
+*/
+
+header nav {
+    background: #b22300;
+    background-color: #b22300;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+
+.menu li a {
+    color: #ffffff;
+}
+
+.menu li a:hover {
+    color: #ffffff;
+    text-decoration: underline;
+}
+
+.button {
+    background-color: #b22300 !important;
+    color: #ffffff;
+}
+
+.button:hover {
+    background-color: #b22300 !important;
+    color: #ffffff;
+    text-decoration: underline;
+}
+
+a.footer, a.footer:visited {
+    color: #7f7f7f;
+    text-decoration: none;
+}
+
+a.footer:hover {
+    color: #7f7f7f;
+    text-decoration: underline;
+}
+
+a.fbfollow, a.fbfollow:hover, a.fbfollow:visited {
+    color: inherit;
+    text-decoration: none;
+}
+
+span.white {
+    color: #ffffff;
+}
+
+.cf {
+    display: block;
+    width: 500px;
+    padding: 6px 12px;
+    font-size: 14px;
+    line-height: 1.42857143;
+    color: #555;
+    background-color: #fff;
+    background-image: none;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075);
+    box-shadow: inset 0 1px 1px rgba(0,0,0,.075);
+    -webkit-transition: border-color ease-in-out .15s,-webkit-box-shadow ease-in-out .15s;
+    -o-transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
+    transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
+    -webkit-rtl-ordering: logical;
+    -webkit-user-select: text;
+    cursor: auto;
+    margin: 0;
+    letter-spacing: normal;
+    word-spacing: normal;
+    text-transform: none;
+    text-indent: 0px;
+    text-shadow: none;
+    text-align: start;
+    -webkit-writing-mode: horizontal-tb;
+    box-sizing: border-box;
+}
+
+.sb {
+    display: inline-block;
+    padding: 6px 12px;
+    margin-bottom: 0;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 1.42857143;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: middle;
+    box-sizing: border-box;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    background-image: none;
+    border: 1px solid transparent;
+    border-radius: 4px;
+    -webkit-appearance: button;
+    text-transform: none;
+    overflow: visible;
+    margin: 0;
+}
+
+.greenbtn {
+    color: #fff;
+    background-color: #5cb85c;
+    border-color: #4cae4c;
+}
+
+.redbtn {
+    color: #fff;
+    background-color: #d9534f;
+    border-color: #d43f3a;
+}
+
+.smallfield {
+    width: 200px;
+}
+
+img.logo {
+    vertical-align: middle;
+    padding: 30px;
+    height: 75px;
+}
+
+.slider {
+    border-radius: 7px !important;
+}
