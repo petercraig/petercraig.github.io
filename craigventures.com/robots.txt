@@ -1,6 +1,0 @@
-# Domain: craigventures.com
-
-User-agent:*
-Disallow:/assets/
-
-# Edited: 30/12/14 (dd/mm/yy)
